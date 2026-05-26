@@ -1,0 +1,7 @@
+flask
+openai
+python-dotenv
+twilio
+chromadb
+langchain
+tiktoken
