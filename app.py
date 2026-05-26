@@ -131,19 +131,18 @@ https://chat.whatsapp.com/HeQQHuayjX5EOXapt1ea6t
 
 
 # ================= ROUTE =================
-# ================= ROUTE =================
 @app.route("/whatsapp", methods=["POST"])
 def whatsapp_reply():
 
     msg = request.form.get("Body", "").strip()
     print("📩 Message:", msg)
 
-    resp = MessagingResponse()
+    if msg.lower() in ["hi", "hello"]:
+        reply = main_menu
+    else:
+        reply = get_answer(msg)
 
-    # 🔥 TEST RESPONSE
-    resp.message("OK WORKING")
-
-    return str(resp)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Response>
 <Message>{reply}</Message>
 </Response>"""
