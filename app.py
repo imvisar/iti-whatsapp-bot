@@ -136,15 +136,17 @@ https://chat.whatsapp.com/HeQQHuayjX5EOXapt1ea6t
 @app.route("/whatsapp", methods=["POST"])
 def whatsapp_reply():
 
-    msg = request.form.get("Body", "").strip()
+    msg = request.form.get("Body", "").strip().lower()
     print("📩 Message:", msg)
 
-    if msg.lower() in ["hi", "hello"]:
-        reply = main_menu
-    else:
-        reply = get_answer(msg)
+    resp = MessagingResponse()
 
-    return f"""<?xml version="1.0" encoding="UTF-8"?>
+    if msg in ["hi", "hello"]:
+        resp.message(main_menu)
+    else:
+        resp.message(get_answer(msg))
+
+    return str(resp), 200, {'Content-Type': 'application/xml'}
 <Response>
 <Message>{reply}</Message>
 </Response>"""
