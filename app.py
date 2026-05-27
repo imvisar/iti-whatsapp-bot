@@ -20,10 +20,10 @@ main_menu = """🎓 *ITI JAFRABAD ADMISSION BOT*
 📌 Option પસંદ કરો:
 
 1️⃣ 📘 ITI એટલે શું?
-2️⃣ 📝 Admission Process  
+2️⃣ 📝 Admission Process 
 3️⃣ 📂 Documents Required  
-4️⃣ 🎁 ITI ના લાભ  
-5️⃣ 🚀 ITI પછી Future  
+4️⃣ 🎁 ITI માટે સરકાર યોજનાઓ   
+5️⃣ 🚀 ITI પછી future  
 6️⃣ 🏫 ITI Jafrabad માં Admission  
 
 ━━━━━━━━━━━━━━━━━━
@@ -39,7 +39,7 @@ def get_answer(choice):
 
 ITI (Industrial Training Institute) એ Government training institute છે.
 
-📚 ITI માં 1 વર્ષ અને 2 વર્ષ ના વિવિધ વ્યાવસાયિક કોર્સ ચાલે છે.
+📚 ITI માં 1 વર્ષ અને 2 વર્ષ ના વિવિધ વ્યવસાયલક્ષી  કોર્સ ચાલે છે.
 
 🔧 અહીં practical તાલીમ પર ખાસ ધ્યાન આપવામાં આવે છે.
 
@@ -62,7 +62,7 @@ https://itiadmission.gujarat.gov.in/
 1️⃣ Website open કરો  
 2️⃣ Registration કરો  
 3️⃣ Login કરી Form Fill કરો  
-4️⃣ ITI ખાતે verify કરાવો  
+4️⃣ સરકારી ITI ખાતે ફોર્મ verify કરાવો  
 5️⃣ ₹50 fee ભરો  
 6️⃣ Trade પસંદ કરો  
 """
@@ -70,10 +70,11 @@ https://itiadmission.gujarat.gov.in/
     elif choice == "3":
         return """📂 *Documents Required*
 
-- 10th Marksheet  
+- 10th Marksheet(૧૦ નાપાસ માટે ૮/૯ Marksheet)  
 - LC  
 - Aadhar Card  
-- Photo  
+- Photo
+- જાતિનો દાખલો (લાગુ પડતા માટે) 
 
 📌 Original documents verify માટે જરૂરી છે  
 """
@@ -81,7 +82,7 @@ https://itiadmission.gujarat.gov.in/
     elif choice == "4":
         return """🎁 *ITI ના લાભ*
 
-🚌 FREE Bus Pass  
+🚌 તમામ તાલીમાર્થીઓને FREE Bus Pass  
 
 👩 Girls Scholarship:
 ➡️ 1 વર્ષ → ₹15,000  
@@ -99,13 +100,13 @@ https://itiadmission.gujarat.gov.in/
     elif choice == "5":
         return """🚀 *ITI પછી Future*
 
-💼 Job Opportunities વધે છે  
+💼industries માં Job Opportunities વધે છે  
 
 🏭 Apprenticeship કરી શકો  
 
-🏢 Placement મેળા દ્વારા job  
+🏢 Placement મેળા દ્વારા સરળતાથી job  
 
-🌍 NCVT થી foreign job chance  
+🌍 NCVT પ્રમાણપત્રથી foreign job chance  
 
 🛠️ Self business પણ કરી શકો  
 """
