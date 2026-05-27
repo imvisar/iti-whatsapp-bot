@@ -48,14 +48,15 @@ def whatsapp_reply():
     msg = request.form.get("Body", "").strip().lower()
     print("📩 Message:", msg)
 
-    resp = MessagingResponse()
-
     if msg in ["hi", "hello"]:
-        resp.message(main_menu)
+        reply = main_menu
     else:
-        resp.message(get_answer(msg))
+        reply = get_answer(msg)
 
-    return str(resp)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+<Message>{reply}</Message>
+</Response>""", 200, {'Content-Type': 'application/xml'}
 
 # ================= RUN =================
 if __name__ == "__main__":
